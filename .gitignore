@@ -5,3 +5,4 @@ src/**/*.js
 demo/app/**/*.js
 npm-debug.log
 bundles
+*.js
