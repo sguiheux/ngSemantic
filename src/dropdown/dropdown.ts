@@ -27,8 +27,12 @@ export class SemanticDropdownComponent implements AfterViewInit {
   @Output() onChange: EventEmitter<string|number> = new EventEmitter<string|number>();
   @ViewChild("dropdown") dropdown: ElementRef;
 
-  ngAfterViewInit(): void {
 
+  ngAfterViewInit(): void {
+    this.refresh();
+  }
+
+  refresh(): void {
     const options: {} = Object.assign({
       onChange: (value: string|number, a: string|number, b: Array<HTMLElement>) => {
         if (b != null && b.length) {
@@ -36,8 +40,7 @@ export class SemanticDropdownComponent implements AfterViewInit {
         }
       }
     }, this.options);
-
     jQuery(this.dropdown.nativeElement)
-      .dropdown(options);
+        .dropdown(options);
   }
 }

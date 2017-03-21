@@ -8,4 +8,5 @@ export declare class SemanticDropdownComponent implements AfterViewInit {
     onChange: EventEmitter<string | number>;
     dropdown: ElementRef;
     ngAfterViewInit(): void;
+    refresh(): void;
 }
