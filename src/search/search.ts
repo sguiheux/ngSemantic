@@ -1,7 +1,6 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, AfterViewInit } from "@angular/core";
 import { FormControl } from "@angular/forms";
-import "rxjs/add/operator/debounceTime";
-import "rxjs/add/operator/distinctUntilChanged";
+import {debounceTime, distinctUntilChanged} from 'rxjs/operators';
 
 /**
  * <sm-search placeholder="Search..." (onSearch)="element.innerText = $event" ></sm-search>
@@ -29,8 +28,10 @@ export class SemanticSearchComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.searchControl
       .valueChanges
-      .distinctUntilChanged()
-      .debounceTime(this.debounce)
+      .pipe(
+        distinctUntilChanged(),
+        debounceTime(this.debounce)
+      )
       .subscribe((data: string|number) => this.onSearch.emit(data));
   }
 }
