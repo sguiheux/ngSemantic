@@ -1,4 +1,5 @@
 import { Component, QueryList, AfterViewInit, ElementRef, Input, ContentChildren, ViewChild } from "@angular/core";
+import {debounceTime} from 'rxjs/operators';
 
 declare var jQuery: any;
 
@@ -55,7 +56,7 @@ export class SemanticTabsComponent implements AfterViewInit {
     // if new tabs are added, re-init
     this.tabs
       .changes
-      .debounceTime(100)
+      .pipe(debounceTime(100))
       .subscribe(() => {
         this.initItemsIndices();
         this.updateTabContentIndices();
