@@ -5,6 +5,7 @@ export declare class SemanticDropdownComponent implements AfterViewInit {
     icon: string;
     items: Array<{}>;
     options: {};
+    disabled: boolean;
     onChange: EventEmitter<string | number>;
     dropdown: ElementRef;
     ngAfterViewInit(): void;

@@ -17,9 +17,9 @@ import { Component } from "@angular/core";
     <sm-button icon="arrow right" (click)="shape.show('flip right')"></sm-button>
     <sm-button icon="arrow up" (click)="shape.show('flip up')"></sm-button>
     <sm-button icon="arrow down" (click)="shape.show('flip down')"></sm-button>
-    
+
     <div class="ui divider"></div>
-    
+
     <sm-shape class="text" #shape (beforeChange)="beforeChange($event)" (onChange)="onChange($event)">
         <div class="sides">
         <div class="ui header active side">This side starts visible.</div>
@@ -27,12 +27,12 @@ import { Component } from "@angular/core";
         <div class="ui header side">This is the last side</div>
       </div>
     </sm-shape>
-    
+
     <h4 class="ui header dividing">Events:</h4>
     <sm-list>
         <sm-item *ngFor="let event of events">{{event}}</sm-item>
     </sm-list>
-    
+
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-shape class="text" #shape (beforeChange)="beforeChange($event)" (onChange)="onChange($event)">
@@ -60,7 +60,7 @@ import { Component } from "@angular/core";
       <td>
         <i class="arrow circle down icon"></i> [options]
       </td>
-      <td>Semantic UI options object for Shape element: 
+      <td>Semantic UI options object for Shape element:
       <a href="http://semantic-ui.com/modules/shape.html#/settings"
        target="_blank"><i class="icon external"></i></a>
        </td>

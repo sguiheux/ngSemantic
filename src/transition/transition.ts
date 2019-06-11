@@ -12,7 +12,7 @@ declare var jQuery: any;
     `
 })
 export class SemanticTransitionComponent {
-  @ViewChild("transition") transition: ElementRef;
+  @ViewChild("transition", {static: true}) transition: ElementRef;
 
   /**
    * Show transition element

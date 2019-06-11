@@ -23,7 +23,7 @@ import { MessageService } from "../../services/message";
             We just updated our privacy policy here to better service our customers. We recommend reviewing the changes.
         </message-content>
     </sm-message>
-    
+
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-message icon="warning">

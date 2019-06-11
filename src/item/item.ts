@@ -22,7 +22,7 @@ export class SemanticItemComponent implements AfterViewInit {
   @Input() header: string;
   @Input() image: string;
 
-  @ViewChild("innerItemElement") innerItemElement: ElementRef;
+  @ViewChild("innerItemElement", {static: true}) innerItemElement: ElementRef;
 
   ngAfterViewInit() {
     this.innerItemElement.nativeElement.parentElement.classList.add("item");

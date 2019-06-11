@@ -27,7 +27,7 @@ export class SemanticMenuComponent implements AfterViewInit {
   @Input() class: string;
   @Input() logoClass: string = "logo";
   @Input() title: string;
-  @ViewChild("innerElement") innerElement: ElementRef;
+  @ViewChild("innerElement", {static: true}) innerElement: ElementRef;
 
   ngAfterViewInit() {
     Array.from(this.innerElement.nativeElement.childNodes)

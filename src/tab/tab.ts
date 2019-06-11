@@ -14,7 +14,7 @@ export class SemanticTabComponent implements AfterViewInit {
   @Input() tab: number;
   @Input() title: string;
   @Input() active: boolean;
-  @ViewChild("tab") tabEl: ElementRef;
+  @ViewChild("tab", {static: true}) tabEl: ElementRef;
 
   ngAfterViewInit() {
     this.tabEl.nativeElement.parentElement.classList.add("ui", "tab", "bottom", "attached", "segment");
@@ -38,7 +38,7 @@ export class SemanticTabComponent implements AfterViewInit {
 })
 export class SemanticTabsComponent implements AfterViewInit {
   @ContentChildren(SemanticTabComponent) tabs: QueryList<SemanticTabComponent>;
-  @ViewChild("menu") menu: ElementRef;
+  @ViewChild("menu", {static: true}) menu: ElementRef;
   // @todo Write interface for options, from :
   // http://semantic-ui.com/modules/tab.html#/settings
   @Input("options") options: {} = {};

@@ -38,7 +38,7 @@ jQuery.fn.fixSidebar = function () {
 })
 export class SemanticSidebarComponent implements OnInit, OnDestroy {
   @Input() class: string;
-  @ViewChild("sidebar") sidebar: ElementRef;
+  @ViewChild("sidebar", {static: true}) sidebar: ElementRef;
 
   constructor(public renderer: Renderer) {
   }

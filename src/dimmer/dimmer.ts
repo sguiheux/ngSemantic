@@ -12,7 +12,7 @@ declare var jQuery: any;
 </div>`
 })
 export class SemanticDimmerComponent {
-  @ViewChild("dimmer") dimmer: ElementRef;
+  @ViewChild("dimmer", {static: true}) dimmer: ElementRef;
 
   /**
    * Show dimmer element
