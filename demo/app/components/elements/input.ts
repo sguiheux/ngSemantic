@@ -20,7 +20,7 @@ import { FormControl } from "@angular/forms";
 &lt;sm-input icon="dollar" [control]="user" class="left" placeholder="Enter name...">&lt;/sm-input>
 </sm-codeblock>
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
-    
+
     <h4 class="ui header">Number</h4>
     <sm-input icon="dollar" type="number" [(model)]="model" class="right fluid" placeholder="Enter a sum..."></sm-input>
     <p>{{model}}</p>
@@ -29,7 +29,7 @@ import { FormControl } from "@angular/forms";
 &lt;sm-input icon="dollar" type="number" [(model)]="model" class="right fluid" placeholder="Enter a sum...">&lt;/sm-input>
 </sm-codeblock>
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
-    
+
     <h4 class="ui header">Labeled</h4>
     <sm-input class="left labeled" label="http://" placeholder="Enter name..."></sm-input>
     <h4 class="ui header">Code</h4>

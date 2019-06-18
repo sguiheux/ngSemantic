@@ -16,14 +16,14 @@ import { Component } from "@angular/core";
     <sm-flag flag="serbia"></sm-flag>
     <sm-flag flag="bosnia"></sm-flag>
     <sm-flag flag="argentina"></sm-flag>
-    
+
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;sm-flag flag="serbia">&lt;/sm-flag>
 &lt;sm-flag flag="bosnia">&lt;/sm-flag>
 &lt;sm-flag flag="argentina">&lt;/sm-flag>
 </sm-codeblock>
-      
+
 </div>
 `
 })

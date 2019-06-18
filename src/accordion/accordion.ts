@@ -18,7 +18,7 @@ declare var jQuery: any;
 export class SemanticAccordionComponent implements AfterViewInit {
   @Input() class: string;
   @Input() options: string;
-  @ViewChild("accordion") accordion: ElementRef;
+  @ViewChild("accordion", {static: false}) accordion: ElementRef;
 
   ngAfterViewInit() {
 

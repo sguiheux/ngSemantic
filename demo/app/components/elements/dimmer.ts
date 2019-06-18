@@ -23,7 +23,7 @@ import { Component } from "@angular/core";
         </div>
     </sm-dimmer>
     <sm-button (click)="dimmer.show({opacity: .7, transition: 'slide up'})" class="primary">Page dimmer</sm-button>
-    
+
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;sm-dimmer #dimmer>

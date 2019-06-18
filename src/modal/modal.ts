@@ -31,7 +31,7 @@ export class SemanticModalComponent implements OnDestroy {
   @Input() class: string;
   @Input() title: string;
   @Input() icon: string;
-  @ViewChild("modal") modal: ElementRef;
+  @ViewChild("modal", {static: false}) modal: ElementRef;
   @Output() onModalShow: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() onModalHide: EventEmitter<boolean> = new EventEmitter<boolean>();
 

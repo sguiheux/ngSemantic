@@ -17,7 +17,7 @@ declare var jQuery: any;
 </div>`
 })
 export class SemanticPopupComponent {
-  @ViewChild("popup") popup: ElementRef;
+  @ViewChild("popup", {static: false}) popup: ElementRef;
   @Input() class: string;
 
   private visible: boolean = false;

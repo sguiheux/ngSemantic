@@ -16,7 +16,7 @@ import { DataServices } from "../../services/data";
     <p>If you want to add loading animation to your Angular 2 app, add this code snippet inside your root app tag.</p>
     <h4 class="ui header">Demo</h4>
     <p><a onClick="location.reload()" href="#/elements/loader">Refresh page</a></p>
-    
+
         <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;div class="ui active inverted dimmer">

@@ -12,21 +12,21 @@ import { Component } from "@angular/core";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Demo rating</h4>
-    
+
     <sm-rating class="massive star" (onRate)="onReceiveRating($event)" [maxRating]="10"></sm-rating>
     <h2 class="ui header">{{result}}</h2>
-    
+
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-rating class="massive star" (onRate)="onReceiveRating($event)" [maxRating]="10">&lt;/sm-rating>
 </sm-codeblock>
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo rating with initial value</h4>
-    
-    <sm-rating 
+
+    <sm-rating
     class="massive heart" (onRate)="onReceiveRating($event)" [initialRating]="2" [maxRating]="10"></sm-rating>
     <h2 class="ui header">{{result}}</h2>
-    
+
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-rating class="massive heart" (onRate)="onReceiveRating($event)" [initialRating]="2" [maxRating]="10">&lt;/sm-rating>

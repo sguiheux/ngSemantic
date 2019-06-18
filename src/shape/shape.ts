@@ -19,7 +19,7 @@ export class SemanticShapeComponent implements AfterViewInit {
   @Input() options: {} = {};
   @Output() beforeChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() onChange: EventEmitter<boolean> = new EventEmitter<boolean>();
-  @ViewChild("shape") shape: ElementRef;
+  @ViewChild("shape", {static: false}) shape: ElementRef;
 
   ngAfterViewInit() {
 

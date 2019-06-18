@@ -15,7 +15,7 @@ import { Component } from "@angular/core";
     <h4 class="ui header">Demo</h4>
     <sm-progress [progress]="percent"></sm-progress>
     <sm-progress class="warning" [progress]="percent"></sm-progress>
-    
+
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;sm-progress [progress]="percent">&lt;/sm-progress>

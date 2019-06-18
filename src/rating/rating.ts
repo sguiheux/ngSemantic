@@ -21,7 +21,7 @@ export class SemanticRatingComponent implements AfterViewInit {
   @Input() initialRating: number;
   @Input() maxRating: number;
   @Output() onRate: EventEmitter<number> = new EventEmitter<number>();
-  @ViewChild("rating") rating: ElementRef;
+  @ViewChild("rating", {static: false}) rating: ElementRef;
 
   ngAfterViewInit(): void {
 
