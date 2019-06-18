@@ -27,7 +27,7 @@ import {
 export class SemanticMessageComponent {
   @Input() icon: string;
   @Input() class: string;
-  @ViewChild("message", {static: true}) message: ElementRef;
+  @ViewChild("message", {static: false}) message: ElementRef;
 
   constructor(public renderer: Renderer) {
   }

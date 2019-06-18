@@ -37,7 +37,7 @@ export class SemanticSelectComponent implements AfterViewInit {
   @Output() modelChange: EventEmitter<string|number> = new EventEmitter<string|number>();
   @Output() onChange: EventEmitter<string|number> = new EventEmitter<string|number>();
   @Output() onSearchChange: EventEmitter<string> = new EventEmitter<string>();
-  @ViewChild("select", {static: true}) select: ElementRef;
+  @ViewChild("select", {static: false}) select: ElementRef;
 
   @Input("model")
   set model(data: string|number) {
