@@ -1,6 +1,6 @@
 import {
   Component, Input, ChangeDetectionStrategy, ViewEncapsulation, ViewChild, ElementRef,
-  Renderer
+  Renderer2
 } from "@angular/core";
 
 /**
@@ -29,10 +29,11 @@ export class SemanticMessageComponent {
   @Input() class: string;
   @ViewChild("message", {static: false}) message: ElementRef;
 
-  constructor(public renderer: Renderer) {
+  constructor(public renderer: Renderer2) {
   }
 
   close() {
-    this.renderer.detachView([this.message.nativeElement]);
+    const parent = this.renderer.parentNode(this.message.nativeElement);
+    this.renderer.removeChild(parent, this.message.nativeElement);
   }
 }
